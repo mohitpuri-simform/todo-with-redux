@@ -1,7 +1,8 @@
 import { Button, Input, Space, type InputRef } from "antd";
 import { useRef } from "react";
-import { useAppDispatch } from "../../../todo ant-d/src/store/hooks/store-hooks";
-import { todoActions } from "../../../todo ant-d/src/store/features/Todos/TodoSlice";
+import { useAppDispatch } from "../store/hooks/store-hooks";
+import { todoActions } from "../store/features/Todos/TodoSlice";
+
 
 export default function AddTodo() {
   const inputRef = useRef<InputRef>(null);

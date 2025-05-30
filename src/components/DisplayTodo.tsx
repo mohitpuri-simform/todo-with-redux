@@ -1,9 +1,7 @@
 import { List, Button, Space, Row, Col, Typography, Tag } from "antd";
-import {
-  useAppDispatch,
-  useAppSelector,
-} from "../../../todo ant-d/src/store/hooks/store-hooks";
-import { todoActions } from "../../../todo ant-d/src/store/features/Todos/TodoSlice";
+import { useAppDispatch, useAppSelector } from "../store/hooks/store-hooks";
+import { todoActions } from "../store/features/Todos/TodoSlice";
+
 
 const { Text } = Typography;
 
