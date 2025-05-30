@@ -2,14 +2,14 @@ import { List, Button, Space, Row, Col, Typography, Tag } from "antd";
 import { useAppDispatch, useAppSelector } from "../store/hooks/store-hooks";
 import { todoActions } from "../store/features/Todos/TodoSlice";
 
-
 const { Text } = Typography;
 
 function TodoActions() {
   const Todos = useAppSelector((state) => state.Todo);
   const dispatch = useAppDispatch();
 
-  function handleEditTodo(id: string, value: string) {
+  function handleEditTodo(id: string, value: string, task: string) {
+    if (!value) value = task;
     dispatch(
       todoActions.EditTodo({
         id: String(id),
@@ -33,12 +33,13 @@ function TodoActions() {
       dataSource={Todos}
       renderItem={(item, index) => (
         <List.Item>
-          <Row style={{ width: "100%" }} justify="space-between" align="middle">
+          <Row className="row" justify="space-between" align="middle">
             <Col span={12}>
               <Text
                 strong
                 editable={{
-                  onChange: (value) => handleEditTodo(item.id, value),
+                  onChange: (value) =>
+                    handleEditTodo(item.id, value, item.task),
                 }}
               >
                 #{index + 1}: {item.task}

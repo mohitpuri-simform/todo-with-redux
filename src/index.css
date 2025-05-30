@@ -1,0 +1,25 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.layout {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  width: 2%;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+}

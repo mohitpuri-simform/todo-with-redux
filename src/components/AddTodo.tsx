@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { useAppDispatch } from "../store/hooks/store-hooks";
 import { todoActions } from "../store/features/Todos/TodoSlice";
 
-
 export default function AddTodo() {
   const inputRef = useRef<InputRef>(null);
   const dispatch = useAppDispatch();
@@ -17,11 +16,7 @@ export default function AddTodo() {
 
   return (
     <Space.Compact block>
-      <Input
-        ref={inputRef}
-        style={{ width: "calc(100% - 200px)" }}
-        value={inputRef.current?.input?.value}
-      />
+      <Input ref={inputRef} />
       <Button onClick={handleAddTodo} type="primary">
         Submit
       </Button>
