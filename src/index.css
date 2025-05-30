@@ -19,3 +19,7 @@ body {
   width: 2%;
   margin: 0 auto;
 }
+
+.row {
+  width: 100%;
+}

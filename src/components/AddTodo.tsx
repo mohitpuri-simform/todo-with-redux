@@ -16,7 +16,7 @@ export default function AddTodo() {
 
   return (
     <Space.Compact block>
-      <Input ref={inputRef} style={{ width: "calc(100% - 200px)" }} />
+      <Input ref={inputRef} />
       <Button onClick={handleAddTodo} type="primary">
         Submit
       </Button>
